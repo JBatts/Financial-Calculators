@@ -1,0 +1,12 @@
+.field {
+    width: 350px;
+    margin: auto;
+    padding: 2rem 9rem 2rem .5rem;
+    background-color: beige;
+    border-radius: 3rem ;
+}
+.table {
+    width: 100%;
+    border: 0;
+    
+}

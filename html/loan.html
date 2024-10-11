@@ -28,9 +28,9 @@
                         Looking for Something?
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="index.html">Homepage</a></li>
-                        <li><a class="dropdown-item" href="login.html">Login</a></li>
-                        <li><a class="dropdown-item" href="registration.html">Sign-Up</a></li>
+                        <li><a class="dropdown-item" href="../html/index.html">Homepage</a></li>
+                        <li><a class="dropdown-item" href="../html/loan.html">Loan</a></li>
+                        <li><a class="dropdown-item" href="../html/roi.html">Roi</a></li>
                         <li><a class="dropdown-item" href="service.html">Product / Services</a></li>
                         <li><a class="dropdown-item" href="test1.html">Testimonials</a></li>
                         <li><a class="dropdown-item" href="checkout.html">Check Out</a></li>
@@ -49,15 +49,14 @@
     <br>
     Payment Per Month <input type="number" id="payPerMonth" readonly>
     <script>
-        function onClick(event) {
-            const formula = event.target.innerText.toLowerCase()
-            const loan = Number(loanAmount.value)
-            const iR = Number(monthIR.value)
-            const numPay = Number(payPerYear.value) * 12
-            payPerMonth.value = calc(loan, iR, numPay, calc)
-        }
+    function onClick(event) {
+        const loan = Number(document.getElementById("loanAmount").value);
+        const iR = Number(monthIR.value); 
+        const numPay = Number(payPerYear.value); 
+        payPerMonth.value = calcLoan(iR, loan, numPay).toFixed(2); 
+    }
 
-        interestCalcBtn.addEventListener("click", onClick);
+    interestCalcBtn.addEventListener("click", onClick);
     </script>
 </body>
 
