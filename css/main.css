@@ -1,12 +1,32 @@
+body {
+    text-align: center;
+    background-color: lightgray;
+}
+
 .field {
     width: 350px;
-    margin: auto;
     padding: 2rem 9rem 2rem .5rem;
-    background-color: beige;
+    background-color: whitesmoke;
     border-radius: 3rem ;
 }
 .table {
     width: 100%;
     border: 0;
     
+}
+.title {
+    padding: 3rem;
+    background-color:whitesmoke;
+    margin: 2rem auto;
+    width: 75%;
+    border-radius: 10rem;
+    
+}
+
+p {
+    padding: 3rem;
+    background-color:whitesmoke;
+    margin: 2rem auto;
+    width: 95%;
+    border-radius: 10rem;
 }
