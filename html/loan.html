@@ -11,20 +11,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="../css/main.css">
-    
+    <link rel="stylesheet" href="../css/main.css">
+
 </head>
 
 <body>
     <header>
-<div class="title">
-        <h1>Calculate Your Cash</h1>
-        <h3>Interest-Only Loan Calculator</h3>
-</div>
+        <div class="title">
+            <h1>Calculate Your Cash</h1>
+            <h3>Interest-Only Loan Calculator</h3>
+        </div>
         <nav>
             <section>
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    <button class="btn btn-secondary dropdown-toggle btn1" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Looking for Something?
                     </button>
@@ -46,14 +46,15 @@
                     Total Loan Amount:
                 </td>
                 <td>
-                    <input type="number" id="loanAmount">                </td>
+                    <input type="number" id="loanAmount" placeholder="$15,000">
+                </td>
             </tr>
             <tr>
                 <td>
                     Interest Rate:
                 </td>
                 <td>
-                    <input type="number" id="monthIR" value="4">
+                    <input type="number" id="monthIR" placeholder="4%">
                 </td>
             </tr>
             <tr>
@@ -61,12 +62,12 @@
                     Number of Years:
                 </td>
                 <td>
-                    <input type="number" id="payPerYear">
+                    <input type="number" id="payPerYear" placeholder="7 Years">
                 </td>
             </tr>
             <tr>
                 <td class="col" colspan="2">
-                    <input type="button" id="interestCalcBtn" value="Calculate Here!">                    <!-- <input type="button" value="Calculate With Our Rates!"> -->
+                    <input class="btn" type="button" id="interestCalcBtn" value="Calculate Now!">
                 </td>
             </tr>
             <tr>
@@ -74,7 +75,7 @@
                     Your Profit:
                 </td>
                 <td>
-                    <input id="payPerMonth" type="text" readonly value="Less than you think">
+                    <input id="payPerMonth" type="text" readonly value="More than you think">
                 </td>
             </tr>
             <tr>
@@ -82,7 +83,7 @@
                     Your Profit With Us:
                 </td>
                 <td>
-                    <input id="rProfitUs" type="text" readonly value="More than you think">
+                    <input id="rProfitUs" type="text" readonly value="Less than you think">
                 </td>
             </tr>
         </table>
@@ -90,25 +91,17 @@
 
 
 
-    <!-- Total Loan Amount: <input type="number" id="loanAmount">
-    <br>
-    Monthly Interest Rate (eg. 0.04 = 4%): <input type="number" id="monthIR" value="4">
-    <br>
-    # of Payments Per Year: <input type="number" id="payPerYear">
-    <br>
-    <input type="button" id="interestCalcBtn" value="Calculate Here!">
-    <br>
-    Payment Per Month <input type="number" id="payPerMonth" readonly> -->
+
     <script>
-    function onClick(event) {
-        const loan = Number(document.getElementById("loanAmount").value);
-        const iR = Number(monthIR.value); 
-        const numPay = Number(payPerYear.value); 
-        payPerMonth.value = calcLoan(iR, loan, numPay).toFixed(2); 
-    }
+        function onClick(event) {
+            const loan = Number(document.getElementById("loanAmount").value);
+            const iR = Number(monthIR.value);
+            const numPay = Number(payPerYear.value);
+            payPerMonth.value = calcLoan(iR, loan, numPay).toFixed(2);
+        }
 
 
-    interestCalcBtn.addEventListener("click", onClick);
+        interestCalcBtn.addEventListener("click", onClick);
     </script>
 </body>
 

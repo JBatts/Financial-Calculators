@@ -30,3 +30,16 @@ p {
     width: 95%;
     border-radius: 10rem;
 }
+.btn {
+    background-color: green;
+    color:white
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn1 {
+    margin-bottom: 2rem;
+}
