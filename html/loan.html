@@ -72,10 +72,18 @@
             </tr>
             <tr>
                 <td>
-                    Your Profit:
+                    Interest Payment:
                 </td>
                 <td>
                     <input id="payPerMonth" type="text" readonly value="More than you think">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Your Total Payment:
+                </td>
+                <td>
+                    <input id="rTotalProfit" type="text" readonly value="Less than you think">
                 </td>
             </tr>
             <tr>
@@ -98,6 +106,7 @@
             const iR = Number(monthIR.value);
             const numPay = Number(payPerYear.value);
             payPerMonth.value = calcLoan(iR, loan, numPay).toFixed(2);
+            rTotalProfit.value = calcTotal
         }
 
 
